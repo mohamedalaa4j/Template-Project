@@ -1,5 +1,6 @@
 package com.template.util
 
+import com.am.template.util.LocalUtil
 import okhttp3.Interceptor
 import okhttp3.Response
 

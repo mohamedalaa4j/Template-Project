@@ -2,7 +2,6 @@ package com.am.template.util
 
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.util.Log
 import android.view.MotionEvent
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -12,19 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.NavOptions
-import androidx.paging.PagingConfig
 import com.am.template.R
-import com.template.util.Constants
-import com.template.util.Constants.TAG
-import com.template.util.LocalUtil
-import com.template.util.state.ApiState
-import com.template.util.state.UiText
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
-import org.json.JSONObject
-import retrofit2.HttpException
-import retrofit2.Response
-import java.io.IOException
 
 fun Activity.hideSoftKeyboard() {
     currentFocus?.let {
@@ -70,30 +57,8 @@ fun navOptionsAnimation(): NavOptions {
             .build()
 }
 
-fun pagingConfig() = PagingConfig(pageSize = Constants.PAGING_PER_PAGE, enablePlaceholders = false)
 
-fun <T>     toResultFlow(call: suspend () -> Response<T>): Flow<ApiState<T>> = flow {
-    emit(ApiState.Loading())
-    try {
-        val response = call()
-        if (response.isSuccessful) {
-            emit(ApiState.Success(response.body()))
-        } else {
-            val errorBodyJson = JSONObject(response.errorBody()!!.charStream().readText())
-            Log.e("ERROR_BODY",errorBodyJson.toString())
-            emit(ApiState.Error(UiText.DynamicString(errorBodyJson.toString())))
-        }
-    } catch (e: HttpException) {
-        Log.d(TAG, e.message.toString())
-        emit(ApiState.Error(UiText.StringResource(R.string.something_went_wrong)))
-    } catch (e: IOException) {
-        Log.d(TAG, e.message.toString())
-        emit(ApiState.Error(UiText.StringResource(R.string.check_your_internet_connection)))
-    } catch (e: Exception) {
-        Log.d(TAG, e.message.toString())
-        emit(ApiState.Error(UiText.StringResource(R.string.something_went_wrong)))
-    }
-}
+
 
 @SuppressLint("ClickableViewAccessibility")
 fun EditText.onRightDrawableClicked(onClicked: (view: EditText) -> Unit) {
@@ -110,6 +75,8 @@ fun EditText.onRightDrawableClicked(onClicked: (view: EditText) -> Unit) {
         hasConsumed
     }
 }
+
+
 
 @SuppressLint("ClickableViewAccessibility")
 fun EditText.onLeftDrawableClicked(onClicked: (view: EditText) -> Unit) {

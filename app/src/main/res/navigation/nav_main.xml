@@ -13,5 +13,30 @@
             android:id="@+id/deepLink5"
             app:uri="https://Events.shop/Api/home" />
     </fragment>
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.am.template.presentation.ui.main.ReportsFragment"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports" />
+    <fragment
+        android:id="@+id/todayFragment"
+        android:name="com.am.template.presentation.ui.main.tablayout.TodayFragment"
+        android:label="fragment_today"
+        tools:layout="@layout/fragment_today" />
+    <fragment
+        android:id="@+id/weekFragment"
+        android:name="com.am.template.presentation.ui.main.tablayout.WeekFragment"
+        android:label="fragment_week"
+        tools:layout="@layout/fragment_week" />
+    <fragment
+        android:id="@+id/monthFragment"
+        android:name="com.am.template.presentation.ui.main.tablayout.MonthFragment"
+        android:label="fragment_month"
+        tools:layout="@layout/fragment_month" />
+    <fragment
+        android:id="@+id/yearFragment"
+        android:name="com.am.template.presentation.ui.main.tablayout.YearFragment"
+        android:label="fragment_year"
+        tools:layout="@layout/fragment_year" />
 
 </navigation>

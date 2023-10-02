@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityCompat
 import com.am.template.R
+import com.am.template.util.LocalUtil
 
 object Constants {
     const val TOPIC = "/topics/MyTopic"

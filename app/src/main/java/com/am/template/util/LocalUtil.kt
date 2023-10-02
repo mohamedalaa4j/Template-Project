@@ -1,4 +1,4 @@
-package com.template.util
+package com.am.template.util
 
 import android.app.Activity
 import android.content.Context
@@ -25,7 +25,7 @@ object LocalUtil {
     }
 
     fun loadLocal(activity: Activity) =
-        setLocal(activity, sharedPreferences.getString(LANGUAGE, "ar")!!)
+        setLocal(activity, sharedPreferences.getString(LANGUAGE, "en")!!)
 
     fun getLang() = sharedPreferences.getString(LANGUAGE, "en")
 

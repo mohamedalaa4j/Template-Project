@@ -9,30 +9,9 @@
     <color name="black_low">#2C2C2C</color>
     <color name="black_low_more">#6F2C2C2C</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="white_low">#F4F4F4</color>
+    <color name="white_low">#FFFFFFFF</color>
 
-    <color name="gray">#757575</color>
-    <color name="gray_low">#F2F2F2</color>
-    <color name="light_gray">#4DD5D5D5</color>
-    <color name="green">#2ECC71</color>
-    <color name="red">#B61415</color>
-    <color name="very_red">#FF0000</color>
-    <color name="red_low">#FFEAE8</color>
-    <color name="new_red">#FC4747</color>
-    <color name="new_orange">#FF6E5A</color>
-    <color name="green_low">#EFFBF4</color>
-    <color name="yellow_low">#FFF6DB</color>
-    <color name="yellow">#EEA026</color>
-    <color name="blue_low">#E3F2FD</color>
-<!--    <color name="events_orange">#D9FF6E5A</color>-->
-    <color name="events_orange">#F5B2A8</color>
-<!--    <color name="events_pink">#D9FA65C9</color>-->
-    <color name="events_pink">#FD9BBE</color>
-    <color name="Events_color_low">#F5F0DE</color>
-    <color name="gray_layer">#73D4D4D4</color>
-    <color name="blue">#40AABB</color>
-    <color name="baby_blue">#2D9CDB</color>
-    <color name="new_gray">#D0CCCC</color>
-    <color name="facebook_color">#4E61B0</color>
-    <color name="gmail_color">#D5513C</color>
+    <color name="app_blue">#021DA5</color>
+
+    <color name="blue_low">#3E021DA5</color>
 </resources>

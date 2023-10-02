@@ -3,7 +3,6 @@ package com.template.util.notification
 import android.content.SharedPreferences
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import com.template.data.remote.dto.NotificationDto
 
 class FirebaseMessageReceiver : FirebaseMessagingService() {
 
@@ -56,10 +55,10 @@ class FirebaseMessageReceiver : FirebaseMessagingService() {
             image = it.imageUrl?.toString() ?:""
         }
 
-        val notificationDto = NotificationDto(
-            title = title, body = message, image = image, link = link, time = time, orderId = orderId,redirectType = redirectType
-        )
-        notificationHelper.push(notificationDto)
+//        val notificationDto = NotificationDto(
+//            title = title, body = message, image = image, link = link, time = time, orderId = orderId,redirectType = redirectType
+//        )
+//        notificationHelper.push(notificationDto)
     }
 
 }

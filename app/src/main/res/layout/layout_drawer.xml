@@ -108,7 +108,6 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/montserratregular"
                     android:gravity="center"
-                    android:text="@string/english"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_12ssp" />
@@ -148,7 +147,6 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/montserratregular"
                     android:gravity="center"
-                    android:text="@string/arabic"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_12ssp" />
@@ -165,28 +163,18 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/navHeader_iv_profile"
-        android:layout_width="@dimen/_74sdp"
-        android:layout_height="@dimen/_74sdp"
-        android:layout_gravity="center"
-        android:padding="@dimen/_8sdp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="@+id/layoutLang_cv_header"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <TextView
         android:id="@+id/navHeader_tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_4sdp"
         android:fontFamily="@font/montserratbold"
-        android:text="@string/guest_mode"
-        android:textColor="@color/new_orange"
+        android:textColor="@color/app_blue"
         android:textSize="@dimen/_16ssp"
+        android:visibility="invisible"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/navHeader_iv_profile"
-        app:layout_constraintTop_toBottomOf="@+id/navHeader_iv_profile" />
+         />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
@@ -209,7 +197,6 @@
                 android:fontFamily="@font/montserratregular"
                 android:gravity="center_vertical"
                 android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/my_account"
                 android:textColor="@color/black_low"
                 android:textSize="@dimen/_12ssp"
                 app:drawableStartCompat="@drawable/ic_arrow_left"
